@@ -1,6 +1,5 @@
 class RemoveFieldNameFromRestaurant < ActiveRecord::Migration[6.0]
-  def change
-
-    remove_column :restaurants, :field_name, :review
+  def change_table :restaurants do |t|
+    t.remove :review
   end
 end
