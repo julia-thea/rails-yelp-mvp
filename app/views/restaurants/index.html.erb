@@ -1,8 +1,13 @@
 <!-- app/views/restaurants/index.html.erb -->
-<h1>All the restaurants</h1>
-<%= link_to "Add a new restaurant", new_restaurant_path %>
-<% @restaurants.each do |restaurant| %>
-  <h2><%= link_to restaurant.name, restaurant_path(restaurant)   %></h2>
-  <p><%= restaurant.address %></p>
-<% end %>
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All the restaurants</h1>
+      <%= link_to "Add a new restaurant", new_restaurant_path %>
+      <% @restaurants.each do |restaurant| %>
+        <h2><%= link_to restaurant.name, restaurant_path(restaurant)   %></h2>
+        <p><%= restaurant.address %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

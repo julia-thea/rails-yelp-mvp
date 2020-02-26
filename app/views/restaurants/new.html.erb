@@ -1,11 +1,18 @@
-<%= form_for(@restaurant) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number %>
-  <%= f.label :category %>
-  <%= f.text_field :category %>
-  <%= f.submit %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <h1>Create a new restaurant</h1>
+      <%= form_for(@restaurant) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :address %>
+        <%= f.text_field :address %>
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number %>
+        <%= f.label :category %>
+        <%= f.text_field :category %><b>
+        <%= f.submit class: 'btn btn-primary' %>
 <% end %>
+    </div>
+  </div>
+</div>
